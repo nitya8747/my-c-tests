@@ -2,11 +2,13 @@
 main(){
     int c;
     c = getchar();
-
+    
     while (c != EOF){
-        printf("%d\n",c);
         putchar(c);
+        printf("%d\n",c);
         c = getchar();
+        
     }
-    printf("HI\n");  //To invoke press CTRL + D or in windows CTRL +Z
+    //Prints the number of characters put in input
+    printf("HI");  //To invoke press CTRL + D or in windows CTRL +Z
 }
