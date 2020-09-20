@@ -2,7 +2,7 @@
 main(){
     int c;
     c = getchar();
-    float number_of_characters;
+    long number_of_characters = 0;
     while (c != EOF){
         putchar(c);
         printf("%d\n",c);
@@ -10,7 +10,7 @@ main(){
         ++number_of_characters; //Incrementing number_if_characters
     }
     //Prints the number of characters put in input
-    printf("Number of characters: %0f\n", number_of_characters);  //To invoke press CTRL + D or in windows CTRL +Z
+    printf("Number of characters: %ld\n", number_of_characters);  //To invoke press CTRL + D or in windows CTRL +Z
 
     //Learning to implement above functionality in for loop
 
