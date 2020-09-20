@@ -14,4 +14,20 @@ main() {
         }
     }
     printf("Number of lines: %d\n", number_of_lines);
+
+
+
+    printf("====================\n");
+    printf("Using For loop\n");
+
+    int nc;  //Number of characters
+    int nl;   //Number of lines
+    int keyboard; //Character stream
+
+    for(nl = 0; (keyboard = getchar())!= EOF; ++nc){
+        if (keyboard == '\n'){
+            ++nl;
+        }
+    }
+    printf("Number of lines: %d\n", nl);
 }
