@@ -11,10 +11,8 @@ void main(){
     power = 5;
 
     //Calling power function 
-    printf("%d^%d is equal to: %d\n",number, power,power_up(number, power));
-    number = 6;
-    power = 7;
-    printf("%d^%d is equal to: %d\n",number, power, power_up(number, power));
+    int result = power_up(number, power);
+    printf("%d^%d is equal to: %d\n",number, power, result);
 }
 
 
