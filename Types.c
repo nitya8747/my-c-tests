@@ -45,6 +45,12 @@ void main(){
     c = 'A';
     c= 65 + 32;
     printf("%c\n", c);
+
+
+    //Conditional assignment
+    int d;
+    d = c >= '0' && c <= '9'; //If c is a digit d = 1 (TRUE) else d = 0 (FALSE)
+    printf("Is the variable c a digit? Answer: %d\n", d);
 }
 
 
