@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <math.h>
 
 #define MAXLINE 1000
 
@@ -51,6 +52,38 @@ void main(){
     int d;
     d = c >= '0' && c <= '9'; //If c is a digit d = 1 (TRUE) else d = 0 (FALSE)
     printf("Is the variable c a digit? Answer: %d\n", d);
+
+
+    //Bitwise Operators
+    int n = 12;
+    n = n & 25;  //AND operator
+
+    n = n | 25; //OR operator
+    
+    n = n ^ 25; //XOR operator
+
+    n = ~n; //Ones Complement
+
+    n = n >> 2; //Right shift (By 2)
+
+    n = n << 2; //Left shift (By 2)
+
+
+    //Increment and decrement operators
+    n = 5;
+    int test;
+    test = n++; //test = 5 n = 6
+    test = ++n; //test = 7 n = 7
+    printf("%d\n", n);
+
+    //Forced conversion
+    double square_root;
+    test = 9;
+    square_root = sqrt((double) test); //Forced type conversion
+    square_root = sqrt(test); //Coerced type conversion
+    printf("Square root of %d is %f: ", test, square_root);
+
+    
 }
 
 
