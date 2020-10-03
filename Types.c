@@ -81,7 +81,14 @@ void main(){
     test = 9;
     square_root = sqrt((double) test); //Forced type conversion
     square_root = sqrt(test); //Coerced type conversion
-    printf("Square root of %d is %f: ", test, square_root);
+    printf("Square root of %d is: %f\n", test, square_root);
+
+
+    //Conditional expressions
+    int integer1 = 300;
+    int integer2 = 25;
+    int z = (integer1 < integer2) ? integer1 : integer2;   //Mimics max(a, b)
+    printf("%d\n", z);
 
     
 }
