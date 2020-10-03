@@ -6,6 +6,10 @@
 
 #define MAXLINE 1000
 
+//Declaration of functions
+int upper_character(int character);
+int lower_character(int character);
+
 void main(){
 
     //String declaration
@@ -32,10 +36,10 @@ void main(){
     printf("%d\n", number);
 
     //Lower case converter
-    printf("Converting 'R' to lowercase: %c\n", lower('R'));
+    printf("Converting 'R' to lowercase: %c\n", lower_character('R'));
 
     //Upper case converter
-    printf("Converting 'r' to uppercase: %c\n", upper('r'));
+    printf("Converting 'r' to uppercase: %c\n", upper_character('r'));
 
     //Upper case built in 
     printf("Built in: %c\n", toupper('c'));
@@ -95,7 +99,7 @@ void main(){
 
 
 //Converting a uppercase character to an lowercase character
-int lower (int c){
+int lower_character (int c){
     if (c >= 'A' && c <= 'Z'){
         c = c + 32;  //There is a change of 32 to become a uppercase character
         return c;
@@ -107,7 +111,7 @@ int lower (int c){
 
 
 //Convertin a lowercase character to uppercase character
-int upper(int c){
+int upper_character(int c){
     if (c >= 'a'  && c <='z'){
         c = c - 32; //There is a change of 32 to become a lower case character
         return c;
