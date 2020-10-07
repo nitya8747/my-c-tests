@@ -94,6 +94,10 @@ void main(){
     int z = (integer1 < integer2) ? integer1 : integer2;   //Mimics max(a, b)
     printf("%d\n", z);
 
+    //Finding if a character is a digit or not
+    char c4 = '5';
+    printf("%d", isdigit(c4)); //Will return some non-zero value which actually means True
+
     
 }
 
