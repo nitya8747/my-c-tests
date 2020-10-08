@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #define MAXLINE 1000
 
 //Function Declarations
 void countingInputs();  //Counts the number of digits, whitespaces, others
+int convertToInteger(char string[]); //Converting strings of digits into integer
+
 void main(){
     int number1;
     int number2;
@@ -39,6 +42,12 @@ void main(){
 
     //Example 2
     countingInputs();
+
+    //For loop
+    //Converting a string to an integer
+    char s[] = "1233232";
+    int integer = convertToInteger(s);
+    printf("Integer: %d\n", integer);
 
 }
 
@@ -85,4 +94,23 @@ void countingInputs(){
 
     printf(", white spaces = %d, other = %d\n", nwhite, nother);
 
+}
+
+
+int convertToInteger(char s[]){
+    int i, n, sign;
+
+    for(i = 0; isspace(s[i]); i++){    //Skipping Whitespaces
+        ;
+    }
+
+    sign = (s[i] == '-') ? -1:1;
+    if (s[i] == '+' || s[i] == '-'){      //Skips sign
+        i++;
+    }
+
+    for (n = 0; isdigit(s[i]); i++){
+        n = 10*n + (s[i] - '0');
+    return sign * n;
+    }
 }
