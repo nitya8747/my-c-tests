@@ -34,7 +34,7 @@ void main(){
     int number;
     switch (number){
         case 5:  printf("Its is 5\n");
-        default: printf("Error");
+        default: printf("Not 5\n");
     }
 
     //Example 2
@@ -65,14 +65,16 @@ void countingInputs(){
             case '8':
             case '9':
                     ndigit[c - '0']++;
+                    break;
 
             case ' ':
             case '\n':
             case '\t':
                     nwhite++;
+                    break; 
             default:
                 nother++;
-                break;
+                break; //The breaks essentially stops the checking to go on. Prevents double counting
         }
     }
 
