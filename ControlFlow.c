@@ -6,6 +6,7 @@
 //Function Declarations
 void countingInputs();  //Counts the number of digits, whitespaces, others
 int convertToInteger(char string[]); //Converting strings of digits into integer
+void shellsort(int v[], int n);
 
 void main(){
     int number1;
@@ -45,10 +46,19 @@ void main(){
 
     //For loop
     //Converting a string to an integer
-    char s[] = "1233232";
+    char s[] = "5";
     int integer = convertToInteger(s);
     printf("Integer: %d\n", integer);
 
+
+    //Shell short
+    int number_array[4] = {4,1,2,3};
+    shellsort(number_array, 4);
+    for (int i = 0; i < 4; i++){
+        printf("%d", number_array[i]);
+    }
+    integer -= 2;
+    printf("%d", integer);
 }
 
 void countingInputs(){
@@ -112,5 +122,20 @@ int convertToInteger(char s[]){
     for (n = 0; isdigit(s[i]); i++){
         n = 10*n + (s[i] - '0');
     return sign * n;
+    }
+}
+
+void shellsort(int v[], int n){
+    int gap, i, j, temp;
+    for (gap = n/2; gap > 0; gap /=2){
+        for (i = gap; i < n; i++){
+            printf("i\n");
+            for (j = i - gap; j >= 0 && v[j] >v[j+gap]; j-=gap){
+                printf("j\n");
+                temp = v[j];
+                v[j] = v[j + gap];
+                v[j + gap] = temp;
+            }
+        }
     }
 }
