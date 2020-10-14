@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
+
 #define MAXLINE 1000
 
 //Function Declarations
 void countingInputs();  //Counts the number of digits, whitespaces, others
 int convertToInteger(char string[]); //Converting strings of digits into integer
 void shellsort(int v[], int n);
+void reverseOrder(char string[]);
 
 void main(){
     int number1;
@@ -59,6 +62,14 @@ void main(){
     }
     integer -= 2;
     printf("%d", integer);
+
+
+    //Reverse order of string
+
+    char string[] = "RaghavSharma";
+    reverseOrder(string);
+
+    printf("\nReverse order of the string: %s\n", string);
 }
 
 void countingInputs(){
@@ -129,13 +140,21 @@ void shellsort(int v[], int n){
     int gap, i, j, temp;
     for (gap = n/2; gap > 0; gap /=2){
         for (i = gap; i < n; i++){
-            printf("i\n");
             for (j = i - gap; j >= 0 && v[j] >v[j+gap]; j-=gap){
-                printf("j\n");
                 temp = v[j];
                 v[j] = v[j + gap];
                 v[j + gap] = temp;
             }
         }
+    }
+}
+
+void reverseOrder(char string[]){
+    int c, i, j;
+
+    for(i = 0, j = strlen(string) - 1; i < j; i++, j--){
+        c = string[i];
+        string[i] = string[j];
+        string[j] = c;
     }
 }
