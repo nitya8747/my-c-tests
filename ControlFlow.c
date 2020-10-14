@@ -79,7 +79,25 @@ void main(){
         printf("Hello Raghav\n");
         count++;
     } while (count <= 5); //6 times the above string was printed
-    
+
+    //break: breaks the loop/gets the porgram out of the loop
+    //Continue tells the loop to go ahead with the next iteration
+
+    //Goto and labels:
+    //Since I dont have an example lets just comment it out
+
+    /*
+        for(........){
+            for(......){
+                ---
+                if (disaster){
+                    goto error;
+                }
+            }
+        }
+        error:
+            stuff to do
+        */
     
 }
 
