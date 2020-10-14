@@ -70,6 +70,17 @@ void main(){
     reverseOrder(string);
 
     printf("\nReverse order of the string: %s\n", string);
+
+    //=========================================================================================
+    //Do-while loop 
+    int count = 0;
+    do
+    {
+        printf("Hello Raghav\n");
+        count++;
+    } while (count <= 5); //6 times the above string was printed
+    
+    
 }
 
 void countingInputs(){
