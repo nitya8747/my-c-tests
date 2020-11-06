@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>     /*For atof()*/
-
+#include "calc.h"
+#define MAXOP 100
 #define MAXOP 100 /*Max size of operand or operator */
 #define NUMBER '0' /*signal that number was found */
 

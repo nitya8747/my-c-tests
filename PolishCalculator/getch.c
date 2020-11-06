@@ -1,5 +1,5 @@
 #define BUFSIZE 100
-
+#include <stdio.h>
 char buf[BUFSIZE];  //Buffer for ungetch
 
 int bufp = 0;

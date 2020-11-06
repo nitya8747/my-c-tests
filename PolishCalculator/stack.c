@@ -1,5 +1,6 @@
+#include <stdio.h>
+#include "calc.h"
 #define MAXVAL 100  /*maximum depth of val stack*/
-
 int stack_position = 0;  //NExt free stack position
 double value[MAXVAL];
 
