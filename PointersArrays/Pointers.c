@@ -40,6 +40,12 @@ void main(){
     //As we saw we changed what pointer points to but still the above statement prints 13
     //This means in line 26 essentially we told pointer2 to point whatever pointer was pointing to at that time
 
+    //When we want to access the data/value in the memory that the pointer points to the contents of the address
+    //with that numerical index then you derefrence the pointer
+
+    //Pointer is the address to the value
+
+
     
 
 
