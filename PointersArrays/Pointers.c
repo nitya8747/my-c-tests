@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+
+void swap(int *var_one, int *var_two);
+
 void main(){
     //Unary operator
 
@@ -46,7 +49,26 @@ void main(){
     //Pointer is the address to the value
 
 
-    
+    //Pointers allow you to manipulate variables that you pass in the function.
+    //Remember earlier the value was copied but nothing changed in the actual variable
 
 
+    int n1 = 3;
+    int n2 = 8;
+
+    printf("\n\n");
+    printf("Before: n1 = %d, n2 = %d\n", n1, n2);
+
+    swap(&n1, &n2);
+
+    printf("After: n1 = %d, n2 = %d\n", n1, n2);
+}
+
+
+void swap(int *var_one, int *var_two){
+    int temp = *var_one;
+
+    *var_one = *var_two;
+
+    *var_two = temp;
 }
