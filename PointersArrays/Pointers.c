@@ -68,6 +68,10 @@ void main(){
     //Lets try finding the length of a string
     char string[] = "Raghav Sharma";
     printf("The size of %s: %d\n", string, strlen(string));
+
+    //Pointers dont add, subtract, divide and multiply
+    //You also can't mask pointers
+     
 }
 
 
