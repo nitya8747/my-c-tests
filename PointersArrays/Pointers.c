@@ -2,7 +2,7 @@
 
 
 void swap(int *var_one, int *var_two);
-
+int strlen(char *string); //Returns the length of a string
 void main(){
     //Unary operator
 
@@ -62,6 +62,12 @@ void main(){
     swap(&n1, &n2);
 
     printf("After: n1 = %d, n2 = %d\n", n1, n2);
+
+
+    //Address arithmetic 
+    //Lets try finding the length of a string
+    char string[] = "Raghav Sharma";
+    printf("The size of %s: %d\n", string, strlen(string));
 }
 
 
@@ -71,4 +77,13 @@ void swap(int *var_one, int *var_two){
     *var_one = *var_two;
 
     *var_two = temp;
+}
+
+int strlen(char *string){
+    char *pointer = string;
+    
+    while(*pointer != '\0'){
+        pointer++;
+    }
+    return pointer - string;
 }
