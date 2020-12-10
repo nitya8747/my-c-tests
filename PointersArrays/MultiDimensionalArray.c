@@ -15,4 +15,26 @@ void main(){
         printf(" %d", matrix[row][column]);
     }
     printf("\n");
+
+    //A few things to note:
+    /*
+        For passing a multidimensinal array in a function
+        function(int array[<n_row>][<n_column>])
+        That being said n_row isnt necessary. The number of rows are necessary
+        but number of columns are necessary
+
+        Why the number of rows unnecessary?
+        as when we pass an array to a function we are just passing the pointer to
+        array.
+        Specifically an array of rows.
+
+        Another way of function calling:
+        function(int (*array)[<n_column>])
+        Note the paranthesis must be there else [] will have higher prcedence
+        f(int *array[<n_column>]) => Represents an array of pointers of obj int
+
+
+        In short the first dimension is free else others have to be specified
+    */
+
 }
