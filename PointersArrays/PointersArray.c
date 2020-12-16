@@ -29,3 +29,15 @@ char *month_name(int n){
 
     return ( n < 1 || n > 12) ? name[0] : name[n];
 }
+
+//Pointers vs Mutli-dimensional Arrays
+/*
+    int a[10][20] => 200 int sized locations
+    positions have been initialised
+
+    int *b[10];
+    IT only allocates 10 pointers of int obj
+    But they aren't initialised
+
+    
+*/
