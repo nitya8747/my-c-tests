@@ -38,4 +38,28 @@ void main(){
         struct point p3;
         struct point p4;
     };
+
+    struct rectangle rectangle1;
+    rectangle1.p1.x = 2;
+    rectangle1.p1.y = 2;
+    
+    rectangle1.p2.x = 6;
+    rectangle1.p2.y = 2;
+    
+    rectangle1.p3.x = 6;
+    rectangle1.p3.y = 0;
+    
+    rectangle1.p4.x = 2;
+    rectangle1.p4.y = 0;
+
+    
+    printf("%ld\n", sizeof(rectangle1));
+    /*
+        Each integer is 4 bytes
+        each point has two integer variables.
+        So each point has the size = 4*2 = 8
+
+        Now each rectangle has 4 points so 
+        4*8 = 32 bytes. Hence the size of rectangle1 is 32 bytes
+    */
 }
