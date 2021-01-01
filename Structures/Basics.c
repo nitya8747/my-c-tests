@@ -28,4 +28,14 @@ void main(){
     float distance = sqrt(distance_sqr);
 
     printf("%.2f\n", distance);
+
+
+    //Nested structures
+
+    struct rectangle{
+        struct point p1;
+        struct point p2;
+        struct point p3;
+        struct point p4;
+    };
 }
